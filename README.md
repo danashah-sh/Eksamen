@@ -1,16 +1,11 @@
-# Eksamensprosjekt 
+# Eksamen 09.06.26
  
-## Om prosjektet
-Dette er mitt eksamensprosjekt hvor jeg skal planlegge, utvikle og dokumentere en digital løsning fra start til slutt. Prosjektet oppdateres underveis som jeg kommer frem til hva jeg skal lage.
- 
+## Oppgaven
+Kommer.... 
  
 ## Verktøy jeg bruker
-- VS Code
-- GitHub
-- HTML, CSS, JavaScript
-- Mer kommer...
+kommer...
   
-## Status
- Prosjektet er under utvikling
- 
+## Filer
+Kommer... 
  
