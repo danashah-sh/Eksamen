@@ -21,6 +21,3 @@ VLAN lar oss dele ett fysisk nettverk inn i flere isolerte nettverk. Selv om all
  
 ---
  
-## Prinsippet om minste privilegium
- 
-All sikkerhet i oppsettet er bygget på én tanke: gi kun tilgang til det som er strengt nødvendig. Alt annet blokkeres som standard. Dette er grunnprinsippet i moderne nettverkssikkerhet.
