@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KontorLeie AS - Dokumentasjon</title>
+    <!-- Kobler til CSS-filen -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigasjonsmenyen -->
+<nav>
+    <a href="index.html" class="nav-logo">Kontor<span>Leie</span></a>
+    <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="nettverk.html">Nettverk</a></li>
+        <li><a href="dokumentasjon.html">Dokumentasjon</a></li>
+        <li><a href="kontakt.html" class="knapp">Kontakt oss</a></li>
+    </ul>
+    <!-- Hamburger-knapp for mobil -->
+    <button class="hamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobilmeny -->
+<div class="mobil-meny">
+    <a href="index.html">Hjem</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="nettverk.html">Nettverk</a>
+    <a href="dokumentasjon.html">Dokumentasjon</a>
+    <a href="kontakt.html">Kontakt oss</a>
+</div>
+
+<!-- Blå banner øverst -->
+<div class="hero" style="padding: 60px 5%;">
+    <div class="hero-innhold">
+        <h1>Dokumentasjon</h1>
+        <p>For eksisterende kunder — nettverksoppsett, veiledninger og svar på vanlige spørsmål.</p>
+    </div>
+</div>
+
+<!-- Hoveddelen av siden -->
+<div class="seksjon">
+
+    <!-- Infoboks som forklarer at siden er for eksisterende kunder -->
+    <div class="info-boks fade-inn">
+        ℹ️ Denne siden er for deg som allerede er kunde hos oss. Her finner du teknisk informasjon om nettverksoppsettet ditt.
+    </div>
+
+    <div style="margin-top:32px">
+
+        <h2 class="seksjon-tittel fade-inn">Nettverksdetaljer (eksempel: Bedrift B)</h2>
+
+        <!-- Boks med IP-adresser og nettverksinnstillinger -->
+        <div class="dok-boks fade-inn">
+            <h3>IP-adresser og innstillinger</h3>
+            <!-- Tabell som viser alle nettverksinnstillingene -->
+            <div class="tabell-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Innstilling</th><th>Verdi</th></tr>
+                    </thead>
+                    <tbody>
+                        <!-- Subnet = nettverkets adresseområde -->
+                        <tr><td>Subnet</td><td>192.168.20.0/24</td></tr>
+                        <!-- Nettverksmaske forteller datamaskinen hvor stort nettverket er -->
+                        <tr><td>Nettverksmaske</td><td>255.255.255.0</td></tr>
+                        <!-- Gateway = IP-adressen til routeren, som er "utgangen" til internett -->
+                        <tr><td>Standard gateway</td><td>192.168.20.1</td></tr>
+                        <!-- DHCP deler automatisk ut IP-adresser til enheter som kobler seg til -->
+                        <tr><td>DHCP-range</td><td>192.168.20.10 – 192.168.20.200</td></tr>
+                        <!-- DNS oversetter domenenavn (google.com) til IP-adresser -->
+                        <tr><td>DNS server 1</td><td>192.168.1.2 (intern)</td></tr>
+                        <tr><td>DNS server 2</td><td>8.8.8.8 (Google)</td></tr>
+                        <!-- Fast IP-adresse til skriveren så alle kan finne den -->
+                        <tr><td>Skriver IP</td><td>192.168.20.50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Boks som forklarer hva DNS er -->
+        <div class="dok-boks fade-inn">
+            <h3>Hva er DNS?</h3>
+            <p>DNS (Domain Name System) er som en telefonbok for internett. Når du skriver "google.com" i nettleseren, bruker datamaskinen DNS til å finne riktig IP-adresse. Vi har en intern DNS-server (192.168.1.2) som håndterer dette, og sender spørringer videre til Google (8.8.8.8) ved behov.</p>
+        </div>
+
+        <!-- Boks med wifi-innstillinger -->
+        <div class="dok-boks fade-inn">
+            <h3>Wifi-informasjon</h3>
+            <div class="tabell-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Innstilling</th><th>Verdi</th></tr>
+                    </thead>
+                    <tbody>
+                        <!-- SSID er det synlige nettverksnavnet man ser når man søker etter wifi -->
+                        <tr><td>Nettverksnavn (SSID)</td><td>KontorLeie-BedriftB</td></tr>
+                        <tr><td>Passord</td><td>Se velkomstbrev eller kontakt oss</td></tr>
+                        <!-- WPA2 er sikkerhetsstandarden som krypterer wifi-trafikken -->
+                        <tr><td>Sikkerhetstype</td><td>WPA2</td></tr>
+                        <tr><td>Gjeste-nettverk</td><td>KontorLeie-Gjest (kun internett)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Steg-for-steg veiledning for å koble til skriver -->
+        <div class="dok-boks fade-inn">
+            <h3>Koble til nettverksskriveren (Windows)</h3>
+            <!-- ol = ordnet liste med numre (1, 2, 3...) -->
+            <ol>
+                <li>Åpne Innstillinger og gå til <strong>Bluetooth og enheter</strong></li>
+                <li>Velg <strong>Skrivere og skannere</strong></li>
+                <li>Klikk <strong>Legg til enhet</strong></li>
+                <li>Velg <strong>Legg til manuelt</strong> hvis skriveren ikke dukker opp</li>
+                <li>Velg <strong>Legg til via TCP/IP-adresse</strong></li>
+                <!-- TCP/IP er protokollen datamaskiner bruker for å kommunisere over nettverk -->
+                <li>Skriv inn IP-adressen: <strong>192.168.20.50</strong></li>
+                <li>Følg instruksjonene — skriveren er klar!</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- FAQ-seksjonen med spørsmål og svar -->
+    <div style="margin-top: 48px;">
+        <h2 class="seksjon-tittel fade-inn">Vanlige spørsmål</h2>
+        <p class="seksjon-undertittel fade-inn">Klikk på et spørsmål for å se svaret.</p>
+
+        <!--
+            FAQ accordion - hvert spørsmål kan åpnes og lukkes.
+            JavaScript i main.js lytter etter klikk på .faq-sporsmal
+            og animerer .faq-svar opp eller ned ved å endre max-height.
+        -->
+        <div class="faq-liste fade-inn">
+
+            <!-- FAQ-element 1 -->
+            <div class="faq-item">
+                <!-- Knappen brukeren klikker på -->
+                <button class="faq-sporsmal">
+                    Hva gjør jeg hvis jeg ikke har internett?
+                    <!-- Pilen snur seg når svaret er åpent (styres av JS) -->
+                    <span class="faq-pil">▼</span>
+                </button>
+                <!-- Svaret er skjult som standard, max-height settes av JS når man klikker -->
+                <div class="faq-svar">
+                    <div class="faq-svar-innhold">
+                        Sjekk at PCen er koblet til riktig wifi-nettverk. Prøv å slå av og på wifi, eller start PCen på nytt. Fungerer det fortsatt ikke? Ring oss på 38 00 00 00.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ-element 2 -->
+            <div class="faq-item">
+                <button class="faq-sporsmal">
+                    Kan jeg koble til en annen bedrifts skriver?
+                    <span class="faq-pil">▼</span>
+                </button>
+                <div class="faq-svar">
+                    <div class="faq-svar-innhold">
+                        Nei, det er ikke mulig. Nettverket er satt opp slik at du kun kan nå utstyr på ditt eget subnet. Brannmuren blokkerer all trafikk mellom bedriftene. Dette er en bevisst sikkerhetsregel.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ-element 3 -->
+            <div class="faq-item">
+                <button class="faq-sporsmal">
+                    Hvordan legger jeg til en ny PC på nettverket?
+                    <span class="faq-pil">▼</span>
+                </button>
+                <div class="faq-svar">
+                    <div class="faq-svar-innhold">
+                        Koble bare den nye PCen til wifi-nettverket ditt med passordet ditt, eller koble til med nettverkskabel. PCen får automatisk en IP-adresse fra vår DHCP-server. Du trenger ikke gjøre noe manuelt.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ-element 4 -->
+            <div class="faq-item">
+                <button class="faq-sporsmal">
+                    Hva er forskjellen på intern DNS og Google DNS?
+                    <span class="faq-pil">▼</span>
+                </button>
+                <div class="faq-svar">
+                    <div class="faq-svar-innhold">
+                        Intern DNS (192.168.1.2) håndterer oppslag innenfor byggets nettverk og er raskere for lokale ressurser. Google DNS (8.8.8.8) brukes som backup når den interne DNS-serveren ikke har svaret — for eksempel for vanlige nettsider.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lenke til kontaktsiden -->
+    <div style="margin-top:32px" class="fade-inn">
+        <p>Finner du ikke svaret? <a href="kontakt.html" style="color:var(--blaa);font-weight:600;">Kontakt oss →</a></p>
+    </div>
+
+</div>
+
+<!-- Bunntekst -->
+<footer>
+    <div>KontorLeie AS &copy; 2025</div>
+    <div class="footer-lenker">
+        <a href="tjenester.html">Tjenester</a>
+        <a href="nettverk.html">Nettverk</a>
+        <a href="dokumentasjon.html">Dokumentasjon</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+</footer>
+
+<!-- JavaScript-filen -->
+<script src="main.js"></script>
+</body>
+</html>

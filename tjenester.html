@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KontorLeie AS - Tjenester</title>
+    <!-- Kobler til CSS-filen som styrer utseendet på siden -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigasjonsmenyen som er lik på alle sider -->
+<nav>
+    <!-- Logo øverst til venstre, lenker tilbake til forsiden -->
+    <a href="index.html" class="nav-logo">Kontor<span>Leie</span></a>
+
+    <!-- Lenkene til de andre sidene -->
+    <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="nettverk.html">Nettverk</a></li>
+        <li><a href="dokumentasjon.html">Dokumentasjon</a></li>
+        <!-- Klassen "knapp" gjør at denne lenken ser ut som en blå knapp -->
+        <li><a href="kontakt.html" class="knapp">Kontakt oss</a></li>
+    </ul>
+
+    <!-- Tre-streker-knapp som kun vises på mobil -->
+    <button class="hamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Meny som åpner seg på mobil når man trykker på hamburger-knappen -->
+<div class="mobil-meny">
+    <a href="index.html">Hjem</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="nettverk.html">Nettverk</a>
+    <a href="dokumentasjon.html">Dokumentasjon</a>
+    <a href="kontakt.html">Kontakt oss</a>
+</div>
+
+<!-- Den blå banneren øverst - mindre enn forsiden siden det er en underside -->
+<div class="hero" style="padding: 60px 5%;">
+    <div class="hero-innhold">
+        <h1>Tjenester</h1>
+        <p>Alt som er inkludert når du leier kontorplass hos oss.</p>
+    </div>
+</div>
+
+<!-- Hoveddelen av siden -->
+<div class="seksjon">
+
+    <!-- Overskrift og beskrivelse -->
+    <h2 class="seksjon-tittel fade-inn">Kontorplass</h2>
+    <!-- fade-inn = elementet glir inn når man scroller ned til det -->
+    <p class="seksjon-undertittel fade-inn">Vi har kontorplasser for bedrifter med 1 til 10 ansatte. Alle kontorer inkluderer:</p>
+
+    <!-- Seks kort i et rutenett som viser hva som er inkludert -->
+    <div class="kort-grid fade-inn">
+
+        <!-- Kort for møblert kontor -->
+        <div class="kort">
+            <div class="kort-ikon"></div>
+            <h3>Møblert kontor</h3>
+            <p>Skrivebord og stol for alle ansatte. Møterom og kjøkken er felles og bookes via vår app.</p>
+        </div>
+
+        <!-- Kort for internett -->
+        <div class="kort">
+            <div class="kort-ikon"></div>
+            <h3>Internett</h3>
+            <p>Fiber med høy hastighet. Stabil forbindelse med dedikert båndbredde for din bedrift.</p>
+        </div>
+
+        <!-- Kort for eget subnet -->
+        <div class="kort">
+            <div class="kort-ikon"></div>
+            <h3>Eget subnet (VLAN)</h3>
+            <p>Ditt eget isolerte nettverk. Andre bedrifter i bygget kan ikke se eller nå ditt utstyr.</p>
+        </div>
+
+        <!-- Kort for wifi -->
+        <div class="kort">
+            <div class="kort-ikon"></div>
+            <h3>Wifi</h3>
+            <p>Eget wifi-nettverk med ditt eget passord. Gjeste-wifi er tilgjengelig og er adskilt fra bedriftsnettverket.</p>
+        </div>
+
+        <!-- Kort for nettverksskriver -->
+        <div class="kort">
+            <div class="kort-ikon"></div>
+            <h3>Nettverksskriver</h3>
+            <p>Alle i bedriften kan skrive ut til skriveren uten kabel. Skriveren er kun tilgjengelig for din bedrift.</p>
+        </div>
+
+        <!-- Kort for support -->
+        <div class="kort">
+            <div class="kort-ikon"></div>
+            <h3>Support og dokumentasjon</h3>
+            <p>IT-support på telefon og e-post. Full dokumentasjon av nettverksoppsettet ditt er tilgjengelig på nett.</p>
+        </div>
+
+    </div>
+
+    <!-- Pristabell-seksjonen -->
+    <!-- style="margin-top: 56px;" gir bare litt luft over denne delen -->
+    <div style="margin-top: 56px;" class="fade-inn">
+        <h2 class="seksjon-tittel">Priser</h2>
+        <p class="seksjon-undertittel">Enkle pakker uten skjulte kostnader.</p>
+
+        <!-- Wrapper rundt tabellen for å få avrundede hjørner og ramme -->
+        <div class="tabell-wrapper">
+            <table>
+                <!-- thead = tabellhodet med kolonnenavn -->
+                <thead>
+                    <tr>
+                        <th>Pakke</th>
+                        <th>Antall ansatte</th>
+                        <th>Pris per måned</th>
+                        <th>Inkludert</th>
+                    </tr>
+                </thead>
+                <!-- tbody = selve dataradene i tabellen -->
+                <tbody>
+                    <tr>
+                        <!-- badge er en liten farget etikett -->
+                        <td><span class="badge">Liten</span></td>
+                        <td>1–2 ansatte</td>
+                        <td><strong>2 990 kr</strong></td>
+                        <td>1 plass, internett, subnet</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge">Medium</span></td>
+                        <td>3–5 ansatte</td>
+                        <td><strong>5 490 kr</strong></td>
+                        <td>5 plasser, internett, subnet, skriver</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge">Stor</span></td>
+                        <td>6–10 ansatte</td>
+                        <td><strong>7 990 kr</strong></td>
+                        <td>10 plasser, internett, subnet, skriver, support</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Lenke til kontaktsiden -->
+    <div style="margin-top:32px" class="fade-inn">
+        <p>Vil du vite mer? <a href="kontakt.html" style="color:var(--blaa);font-weight:600;">Ta kontakt med oss →</a></p>
+    </div>
+
+</div>
+
+<!-- Bunntekst med copyright og sidelenker -->
+<footer>
+    <div>KontorLeie AS &copy; 2025</div>
+    <div class="footer-lenker">
+        <a href="tjenester.html">Tjenester</a>
+        <a href="nettverk.html">Nettverk</a>
+        <a href="dokumentasjon.html">Dokumentasjon</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+</footer>
+
+<!-- JavaScript-filen som håndterer animasjoner og mobilmeny -->
+<script src="main.js"></script>
+</body>
+</html>

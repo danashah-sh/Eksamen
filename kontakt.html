@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KontorLeie AS - Kontakt</title>
+    <!-- Kobler til CSS-filen -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigasjonsmenyen -->
+<nav>
+    <a href="index.html" class="nav-logo">Kontor<span>Leie</span></a>
+    <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="nettverk.html">Nettverk</a></li>
+        <li><a href="dokumentasjon.html">Dokumentasjon</a></li>
+        <li><a href="kontakt.html" class="knapp">Kontakt oss</a></li>
+    </ul>
+    <!-- Hamburger-knapp for mobil -->
+    <button class="hamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobilmeny -->
+<div class="mobil-meny">
+    <a href="index.html">Hjem</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="nettverk.html">Nettverk</a>
+    <a href="dokumentasjon.html">Dokumentasjon</a>
+    <a href="kontakt.html">Kontakt oss</a>
+</div>
+
+<!-- Blå banner øverst -->
+<div class="hero" style="padding: 60px 5%;">
+    <div class="hero-innhold">
+        <h1>Kontakt oss</h1>
+        <p>Vi svarer innen én arbeidsdag. Ta gjerne en telefon hvis det haster.</p>
+    </div>
+</div>
+
+<!-- Hoveddelen med skjema og kontaktinfo side om side -->
+<div class="seksjon">
+
+    <!--
+        skjema-wrapper bruker CSS grid for å dele siden i to kolonner:
+        venstre side = kontaktskjemaet
+        høyre side = kontaktinformasjon
+    -->
+    <div class="skjema-wrapper">
+
+        <!-- VENSTRE SIDE: Kontaktskjema -->
+        <div class="skjema fade-inn">
+            <h3>Send oss en melding</h3>
+
+            <!--
+                id="kontaktskjema" brukes av JavaScript for å fange opp
+                når brukeren trykker "Send melding", slik at vi kan vise
+                en suksessmelding i stedet for å laste siden på nytt.
+            -->
+            <form id="kontaktskjema">
+
+                <!-- Felt for navn -->
+                <div class="felt">
+                    <!-- for="navn" kobler labelen til input-feltet med id="navn" -->
+                    <label for="navn">Navn</label>
+                    <input type="text" id="navn" placeholder="Ola Nordmann" required>
+                    <!-- required betyr at feltet må fylles ut før skjemaet kan sendes -->
+                </div>
+
+                <!-- Felt for bedriftsnavn -->
+                <div class="felt">
+                    <label for="bedrift">Bedrift</label>
+                    <input type="text" id="bedrift" placeholder="Eksempel AS">
+                </div>
+
+                <!-- Felt for e-post -->
+                <div class="felt">
+                    <label for="epost">E-post</label>
+                    <!-- type="email" gjør at nettleseren sjekker at det er en gyldig e-postadresse -->
+                    <input type="email" id="epost" placeholder="ola@eksempel.no" required>
+                </div>
+
+                <!-- Nedtrekksliste for antall ansatte -->
+                <div class="felt">
+                    <label for="ansatte">Antall ansatte</label>
+                    <!-- select lager en nedtrekksliste med valgmuligheter -->
+                    <select id="ansatte">
+                        <option value="">-- Velg --</option>
+                        <option>1–2 ansatte</option>
+                        <option>3–5 ansatte</option>
+                        <option>6–10 ansatte</option>
+                    </select>
+                </div>
+
+                <!-- Tekstfelt for melding -->
+                <div class="felt">
+                    <label for="melding">Melding</label>
+                    <!-- textarea er et stort tekstfelt, i motsetning til input som er én linje -->
+                    <textarea id="melding" placeholder="Skriv hva du lurer på..." required></textarea>
+                </div>
+
+                <!-- Send-knapp -->
+                <!-- type="submit" gjør at knappen sender skjemaet når man trykker -->
+                <button type="submit" class="btn btn-blaa">Send melding</button>
+
+            </form>
+
+            <!--
+                Denne grønne boksen er skjult som standard (display: none i CSS).
+                JavaScript viser den (display: flex) når skjemaet er sendt.
+                id="suksess-melding" brukes av JS for å finne elementet.
+            -->
+            <div id="suksess-melding" class="suksess">
+                ✅ Takk! Vi tar kontakt med deg snart.
+            </div>
+
+        </div>
+
+        <!-- HØYRE SIDE: Kontaktinformasjon -->
+        <div class="kontakt-info fade-inn">
+
+            <!-- Adresse -->
+            <div class="kontakt-rad">
+                <div class="kontakt-ikon"></div>
+                <div>
+                    <h4>Adresse</h4>
+                    <p>Kontorvegen 12, 4800 Arendal</p>
+                </div>
+            </div>
+
+            <!-- Telefon -->
+            <div class="kontakt-rad">
+                <div class="kontakt-ikon"></div>
+                <div>
+                    <h4>Telefon</h4>
+                    <p>38 00 00 00</p>
+                </div>
+            </div>
+
+            <!-- E-post -->
+            <div class="kontakt-rad">
+                <div class="kontakt-ikon"></div>
+                <div>
+                    <h4>E-post</h4>
+                    <p>post@kontorleie.no</p>
+                </div>
+            </div>
+
+            <!-- Åpningstider -->
+            <div class="kontakt-rad">
+                <div class="kontakt-ikon"></div>
+                <div>
+                    <h4>Åpningstider</h4>
+                    <p>Mandag–fredag kl. 08:00–16:00</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Bunntekst -->
+<footer>
+    <div>KontorLeie AS &copy; 2025</div>
+    <div class="footer-lenker">
+        <a href="tjenester.html">Tjenester</a>
+        <a href="nettverk.html">Nettverk</a>
+        <a href="dokumentasjon.html">Dokumentasjon</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+</footer>
+
+<!-- JavaScript-filen som bl.a. håndterer skjema-innsendingen -->
+<script src="main.js"></script>
+</body>
+</html>

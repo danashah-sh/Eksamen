@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KontorLeie AS - Nettverk</title>
+    <!-- Kobler til CSS-filen som styrer utseendet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigasjonsmenyen -->
+<nav>
+    <a href="index.html" class="nav-logo">Kontor<span>Leie</span></a>
+    <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="nettverk.html">Nettverk</a></li>
+        <li><a href="dokumentasjon.html">Dokumentasjon</a></li>
+        <li><a href="kontakt.html" class="knapp">Kontakt oss</a></li>
+    </ul>
+    <!-- Hamburger-knapp for mobil -->
+    <button class="hamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobilmeny -->
+<div class="mobil-meny">
+    <a href="index.html">Hjem</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="nettverk.html">Nettverk</a>
+    <a href="dokumentasjon.html">Dokumentasjon</a>
+    <a href="kontakt.html">Kontakt oss</a>
+</div>
+
+<!-- Blå banner øverst -->
+<div class="hero" style="padding: 60px 5%;">
+    <div class="hero-innhold">
+        <h1>Nettverksoppsett</h1>
+        <p>Slik er nettverket satt opp, og hvorfor det er trygt.</p>
+    </div>
+</div>
+
+<!-- Hoveddelen av siden -->
+<div class="seksjon">
+
+    <!-- Forklaring av hva et subnet er -->
+    <h2 class="seksjon-tittel fade-inn">Hva er et subnet?</h2>
+    <p class="seksjon-undertittel fade-inn">Et subnet er et privat nettverk innenfor et større nettverk. Tenk på det som et eget rom i et stort hus — alle i rommet kan snakke med hverandre, men de kan ikke gå inn i de andre rommene.</p>
+
+    <!-- Blå infoboks med tips -->
+    <div class="info-boks fade-inn">
+        💡 Hos oss får hver bedrift sitt eget subnet. Dine ansatte kan nå hverandres PCer og skrivere, men ingen andre bedrifter kan se ditt utstyr.
+    </div>
+
+    <!-- Nettverksdiagram-seksjonen -->
+    <div style="margin-top: 40px;" class="fade-inn">
+        <h2 class="seksjon-tittel">Slik ser oppsettet ut</h2>
+        <p class="seksjon-undertittel">Vi bruker VLAN (Virtual Local Area Network) og en brannmur for å holde bedriftene adskilt.</p>
+
+        <!--
+            Dette er nettverksdiagrammet laget kun med HTML og CSS.
+            Det viser hvordan internett → router → switch → bedrifter henger sammen.
+            Pilene (↕) er bare vanlige tegn, ikke bilder.
+        -->
+        <div class="nettverk-diagram fade-inn">
+
+            <!-- Øverste node: internett -->
+            <div><span class="nett-node nett-internett">🌐 Internett</span></div>
+            <span class="nett-pil">↕</span>
+
+            <!-- Router og brannmur - stopper trafikk mellom bedriftene -->
+            <div><span class="nett-node nett-router">🛡️ Router / Brannmur</span></div>
+            <span class="nett-pil">↕</span>
+
+            <!-- Switch med VLAN - deler nettverket opp i separate deler -->
+            <div><span class="nett-node nett-switch">⚙️ Switch (VLAN)</span></div>
+            <span class="nett-pil">↕</span>
+
+            <!-- De tre bedriftenes subnet ved siden av hverandre -->
+            <div class="subnet-row">
+
+                <!-- Bedrift A sitt subnet - grønn farge -->
+                <div class="subnet-gruppe a">
+                    <div class="subnet-label">Bedrift A</div>
+                    <!-- IP-adressen som er reservert for denne bedriften -->
+                    <div class="subnet-ip">192.168.10.0/24</div>
+                    <!-- Emojier som representerer PC-er og skriver -->
+                    <div class="subnet-enheter">💻 💻 🖨️</div>
+                </div>
+
+                <!-- Bedrift B sitt subnet - blå farge -->
+                <div class="subnet-gruppe b">
+                    <div class="subnet-label">Bedrift B</div>
+                    <div class="subnet-ip">192.168.20.0/24</div>
+                    <div class="subnet-enheter">💻 💻 🖨️</div>
+                </div>
+
+                <!-- Bedrift C sitt subnet - rød farge -->
+                <div class="subnet-gruppe c">
+                    <div class="subnet-label">Bedrift C</div>
+                    <div class="subnet-ip">192.168.30.0/24</div>
+                    <div class="subnet-enheter">💻 💻 🖨️</div>
+                </div>
+
+            </div>
+
+            <!-- Advarselstekst under diagrammet -->
+            <div class="blokkert">🚫 Bedriftene kan IKKE nå hverandres utstyr</div>
+
+        </div>
+    </div>
+
+    <!-- Tabell med oversikt over alle subnet -->
+    <div style="margin-top: 48px;" class="fade-inn">
+        <h2 class="seksjon-tittel">Subnet-oversikt</h2>
+
+        <!-- Wrapper gir tabellen avrundede hjørner og ramme -->
+        <div class="tabell-wrapper" style="margin-top:16px">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bedrift</th>
+                        <th>Subnet-adresse</th>
+                        <th>Gateway</th>
+                        <!-- Gateway = "utgangsporten" til internett for hvert nettverk -->
+                        <th>Ledige IP-er</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bedrift A</td>
+                        <td>192.168.10.0/24</td>
+                        <td>192.168.10.1</td>
+                        <!-- /24 betyr det er plass til 254 enheter i dette nettverket -->
+                        <td>254 stk</td>
+                    </tr>
+                    <tr>
+                        <td>Bedrift B</td>
+                        <td>192.168.20.0/24</td>
+                        <td>192.168.20.1</td>
+                        <td>254 stk</td>
+                    </tr>
+                    <tr>
+                        <td>Bedrift C</td>
+                        <td>192.168.30.0/24</td>
+                        <td>192.168.30.1</td>
+                        <td>254 stk</td>
+                    </tr>
+                    <tr>
+                        <td>Ny bedrift</td>
+                        <td>192.168.40.0/24</td>
+                        <td>192.168.40.1</td>
+                        <td>254 stk (ledig)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Sikkerhetsregler med fargede infobokser -->
+    <div style="margin-top: 48px;" class="fade-inn">
+        <h2 class="seksjon-tittel">Sikkerhetsregler</h2>
+
+        <!-- display:flex og flex-direction:column stable boksene loddrett -->
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:10px;">
+
+            <!-- Grønn boks = noe som er tillatt -->
+            <div class="info-boks gronn">✅ PCer og skrivere innenfor samme bedrift kan kommunisere med hverandre</div>
+
+            <!-- Rød boks = noe som er blokkert -->
+            <div class="info-boks rod">🚫 Bedrifter kan ikke nå hverandres utstyr — blokkeres av brannmuren</div>
+
+            <div class="info-boks gronn">✅ Alle bedrifter har tilgang til internett</div>
+
+            <div class="info-boks rod">🚫 Gjeste-wifi er adskilt fra alle bedriftsnettverk</div>
+
+        </div>
+    </div>
+
+    <!-- Lenke videre til dokumentasjon -->
+    <div style="margin-top:32px" class="fade-inn">
+        <p>Vil du se din tekniske dokumentasjon? <a href="dokumentasjon.html" style="color:var(--blaa);font-weight:600;">Gå til dokumentasjon →</a></p>
+    </div>
+
+</div>
+
+<!-- Bunntekst -->
+<footer>
+    <div>KontorLeie AS &copy; 2025</div>
+    <div class="footer-lenker">
+        <a href="tjenester.html">Tjenester</a>
+        <a href="nettverk.html">Nettverk</a>
+        <a href="dokumentasjon.html">Dokumentasjon</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+</footer>
+
+<!-- JavaScript-filen -->
+<script src="main.js"></script>
+</body>
+</html>

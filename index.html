@@ -1,11 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KontorLeie AS - Hjem</title>
+    <!-- Kobler til CSS-filen som styrer utseendet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<!-- Navigasjonsmenyen øverst på siden -->
+<nav>
+    <!-- Logo som også er en lenke tilbake til forsiden -->
+    <a href="index.html" class="nav-logo">Kontor<span>Leie</span></a>
+
+    <!-- Lenker til de andre sidene -->
+    <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="nettverk.html">Nettverk</a></li>
+        <li><a href="dokumentasjon.html">Dokumentasjon</a></li>
+        <!-- Denne lenken ser ut som en knapp (blå bakgrunn) -->
+        <li><a href="kontakt.html" class="knapp">Kontakt oss</a></li>
+    </ul>
+
+    <!-- Hamburger-knapp som vises kun på mobil (tre streker) -->
+    <button class="hamburger" aria-label="Meny">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobilmeny som åpner seg når man trykker på hamburger-knappen -->
+<div class="mobil-meny">
+    <a href="index.html">Hjem</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="nettverk.html">Nettverk</a>
+    <a href="dokumentasjon.html">Dokumentasjon</a>
+    <a href="kontakt.html">Kontakt oss</a>
+</div>
+
+<!-- Hero-seksjonen - den store blå banneren øverst -->
+<div class="hero">
+    <div class="hero-innhold">
+        <!-- Hovedoverskriften -->
+        <h1>Kontorplass med nettverk klart fra dag én</h1>
+        <!-- Kort beskrivelse under overskriften -->
+        <p>Vi leier ut kontorplasser til bedrifter med 1–10 ansatte. Eget isolert nettverk, nettverksskriver og internett — alt er klart når du starter.</p>
+        <!-- To knapper som tar deg videre -->
+        <div class="hero-knapper">
+            <a href="tjenester.html" class="btn btn-hvit">Se tjenestene</a>
+            <a href="kontakt.html" class="btn btn-outline-hvit">Ta kontakt</a>
+        </div>
+    </div>
+</div>
+
+<!-- Statistikk-stripe med tre tall - animeres med JavaScript -->
+<div class="statistikk">
+    <!-- data-slutt og data-suffix brukes av JavaScript for å animere tallene -->
+    <div class="stat-element">
+        <div class="stat-tall" data-slutt="40" data-suffix="+">0+</div>
+        <div class="stat-tekst">Bedrifter hos oss</div>
+    </div>
+    <div class="stat-element">
+        <div class="stat-tall" data-slutt="99" data-suffix="%">0%</div>
+        <div class="stat-tekst">Oppetid på nettverk</div>
+    </div>
+    <div class="stat-element">
+        <div class="stat-tall" data-slutt="10" data-suffix=" min">0 min</div>
+        <div class="stat-tekst">Oppsett i snitt</div>
+    </div>
+</div>
+
+<!-- Hoveddelen av forsiden med tekst og kort -->
+<div class="seksjon">
+
+    <!-- Kort introduksjonstekst om bedriften -->
+    <!-- fade-inn gjør at elementet glir inn når man scroller ned -->
+    <p class="seksjon-undertittel fade-inn">KontorLeie AS er et selskap som leier ut kontorplasser til små bedrifter. Vi ordner IT-oppsettet — du fokuserer på jobben din.</p>
+
+    <!-- Overskrift for kortene under -->
+    <h2 class="seksjon-tittel fade-inn">Hvorfor velge oss?</h2>
+    <p class="seksjon-undertittel fade-inn">Alt du trenger er inkludert. Ingen tech-kompetanse nødvendig.</p>
+
+    <!-- Grid med seks informasjonskort -->
+    <div class="kort-grid">
+
+        <!-- Kort 1 -->
+        <div class="kort fade-inn">
+            <div class="kort-ikon"></div>
+            <h3>Ferdig nettverksoppsett</h3>
+            <p>Nettverket er klart når du starter. Du bare kobler til PCen din og er i gang — ingen konfigurasjon nødvendig.</p>
+        </div>
+
+        <!-- Kort 2 -->
+        <div class="kort fade-inn">
+            <div class="kort-ikon"></div>
+            <h3>Eget privat subnet</h3>
+            <p>Din bedrift får sitt eget isolerte nettverk. Andre bedrifter i bygget kan ikke se ditt utstyr, og du kan ikke se theirs.</p>
+        </div>
+
+        <!-- Kort 3 -->
+        <div class="kort fade-inn">
+            <div class="kort-ikon"></div>
+            <h3>Nettverksskriver</h3>
+            <p>Alle ansatte kan skrive ut til bedriftens skriver over nettverket. Ingen kabler, ingen deling med andre.</p>
+        </div>
+
+        <!-- Kort 4 -->
+        <div class="kort fade-inn">
+            <div class="kort-ikon"></div>
+            <h3>Wifi for bedriften</h3>
+            <p>Eget wifi-nettverk med passord bare din bedrift har. Gjester bruker et separat nettverk.</p>
+        </div>
+
+        <!-- Kort 5 -->
+        <div class="kort fade-inn">
+            <div class="kort-ikon"></div>
+            <h3>IT-support inkludert</h3>
+            <p>Noe funker ikke? Vi hjelper deg. Ring oss eller sjekk dokumentasjonssiden vår for steg-for-steg veiledninger.</p>
+        </div>
+
+        <!-- Kort 6 -->
+        <div class="kort fade-inn">
+            <div class="kort-ikon"></div>
+            <h3>Dokumentasjon</h3>
+            <p>Full oversikt over ditt nettverksoppsett — DNS, IP-adresser og skriveroppsett — tilgjengelig når du trenger det.</p>
+        </div>
+
+    </div>
+
+    <!-- Avsluttende tekst med lenke til tjenester-siden -->
+    <div style="margin-top:48px" class="fade-inn">
+        <h2 class="seksjon-tittel">Passer for 1–10 ansatte</h2>
+        <p class="seksjon-undertittel">Vi er laget for nettopp små bedrifter. Det er enkelt å sette opp og vi stiller opp om det trengs. <a href="tjenester.html" style="color:var(--blaa);font-weight:600;">Se alle tjenester →</a></p>
+    </div>
+
+</div>
+
+<!-- Bunntekst med copyright og lenker -->
+<footer>
+    <div>KontorLeie AS &copy; 2025</div>
+    <div class="footer-lenker">
+        <a href="tjenester.html">Tjenester</a>
+        <a href="nettverk.html">Nettverk</a>
+        <a href="dokumentasjon.html">Dokumentasjon</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+</footer>
+
+<!-- Kobler til JavaScript-filen som håndterer animasjoner og interaktivitet -->
+<script src="main.js"></script>
 </body>
 </html>
