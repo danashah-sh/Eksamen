@@ -7,10 +7,11 @@ Hver bedrift har 1-10 ansatte og disse skal ha IT-utstyr som kan kommunisere med
 
 En bedrift skal ikke kunne nå andre bedrifts IT- utstyr. (Subnet)
 
-
-## Verktøy jeg bruker
-kommer...
+## Verktøy jeg brukte
+- Visual Studio Code — kode-editor
+- GitHub — innlevering
+- draw.io — nettverksskisse
+- Claude AI — hjelp til kode og dokumentasjon
+- w3schools - Hjelp til kode
   
-## Filer
-Kommer... 
- 
+
